@@ -11,7 +11,7 @@ public class ExtractVariableHandler extends Handler {
 
   @Override
   public RefactoringInfo specify(Refactoring refactoring, RefactoringInfo info) {
-    ExtractVariableRefactoring ref = (ExtractVariableRefactoring) refactoring;
+/*    ExtractVariableRefactoring ref = (ExtractVariableRefactoring) refactoring;
 
     return info.setGroup(Group.VARIABLE)
         .setNameBefore(StringUtils.calculateSignature(ref.getOperationBefore()))
@@ -19,6 +19,7 @@ public class ExtractVariableHandler extends Handler {
         .setElementBefore(ref.getVariableDeclaration().getVariableDeclaration().toQualifiedString())
         .setElementAfter(null)
         .addMarking(ref.getOperationBefore().getBody().getCompositeStatement().codeRange(),
-            ref.getExtractedVariableDeclarationCodeRange(), true);
+            ref.getExtractedVariableDeclarationCodeRange(), true);*/
+    return null;
   }
 }

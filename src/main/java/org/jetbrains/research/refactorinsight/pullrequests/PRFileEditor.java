@@ -36,10 +36,8 @@ import javax.swing.tree.TreePath;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.util.ArrayList;
-import java.util.Collection;
+import java.util.*;
 import java.util.List;
-import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -87,11 +85,11 @@ public class PRFileEditor extends FileEditorBase {
         } catch (VcsException e) {
           e.printStackTrace();
         }
-        saveCommitsDetails(details);
       }
 
       @Override
       public void onFinished() {
+        saveCommitsDetails(details);
         calculateRefactorings();
       }
     });
@@ -129,7 +127,7 @@ public class PRFileEditor extends FileEditorBase {
     MiningService miner = MiningService.getInstance(project);
     List<RefactoringInfo> refactoringsFromAllCommits = new ArrayList<>();
 
-    for (String commitId : file.getCommitsIds()) {
+    for (String commitId : commitsDetails.keySet()) {
       RefactoringEntry entry = miner.get(commitId);
       if (entry != null) {
         refactoringsFromAllCommits.addAll(entry.getRefactorings());

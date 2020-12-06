@@ -2,7 +2,9 @@ package org.jetbrains.research.refactorinsight.data.types.attributes;
 
 import gr.uom.java.xmi.decomposition.VariableDeclaration;
 import gr.uom.java.xmi.diff.MergeAttributeRefactoring;
+
 import java.util.stream.Collectors;
+
 import org.jetbrains.research.refactorinsight.data.Group;
 import org.jetbrains.research.refactorinsight.data.RefactoringInfo;
 import org.jetbrains.research.refactorinsight.data.types.Handler;
@@ -12,6 +14,7 @@ public class MergeAttributeHandler extends Handler {
 
   @Override
   public RefactoringInfo specify(Refactoring refactoring, RefactoringInfo info) {
+/*
     MergeAttributeRefactoring ref = (MergeAttributeRefactoring) refactoring;
 
     String classNameAfter = ref.getClassNameAfter();
@@ -27,6 +30,7 @@ public class MergeAttributeHandler extends Handler {
             .map(VariableDeclaration::getVariableName)
             .collect(Collectors.joining()))
         .setNameAfter(ref.getNewAttribute().getVariableDeclaration().getVariableName());
-
+*/
+    return null;
   }
 }

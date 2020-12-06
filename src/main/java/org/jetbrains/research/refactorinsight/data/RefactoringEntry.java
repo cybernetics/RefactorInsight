@@ -93,7 +93,7 @@ public class RefactoringEntry implements Serializable {
         new RefactoringEntry(commitHash, commitParentHash, commitTimestamp);
 
     List<RefactoringInfo> infos =
-        refactorings.stream().map(ref -> factory.create(ref, entry)).collect(
+        refactorings.stream().map(ref -> factory.create(ref, entry)).filter(Objects::nonNull).collect(
             Collectors.toList());
 
     entry.setRefactorings(infos).combineRelated();

@@ -10,7 +10,7 @@ public class ExtractAttributeHandler extends Handler {
 
   @Override
   public RefactoringInfo specify(Refactoring refactoring, RefactoringInfo info) {
-    ExtractAttributeRefactoring ref = (ExtractAttributeRefactoring) refactoring;
+/*    ExtractAttributeRefactoring ref = (ExtractAttributeRefactoring) refactoring;
     ref.leftSide().forEach(extraction ->
         info.addMarking(
             extraction,
@@ -23,6 +23,7 @@ public class ExtractAttributeHandler extends Handler {
         .setNameBefore(
             ref.getVariableDeclaration().getName() + " : " + ref.getVariableDeclaration().getType())
         .setNameAfter(ref.getVariableDeclaration().getName() + " : "
-            + ref.getVariableDeclaration().getType());
+            + ref.getVariableDeclaration().getType());*/
+    return null;
   }
 }

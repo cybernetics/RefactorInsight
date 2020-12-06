@@ -10,7 +10,7 @@ public class ChangeAttributeTypeHandler extends Handler {
 
   @Override
   public RefactoringInfo specify(Refactoring refactoring, RefactoringInfo info) {
-    ChangeAttributeTypeRefactoring ref = (ChangeAttributeTypeRefactoring) refactoring;
+/*    ChangeAttributeTypeRefactoring ref = (ChangeAttributeTypeRefactoring) refactoring;
 
     String classNameBefore = ref.getClassNameBefore();
     String classNameAfter = ref.getClassNameAfter();
@@ -23,7 +23,7 @@ public class ChangeAttributeTypeHandler extends Handler {
         .setNameAfter(ref.getChangedTypeAttribute().getVariableDeclaration().toQualifiedString())
         .addMarking(ref.getOriginalAttribute().getType().codeRange(),
             ref.getChangedTypeAttribute().getType().codeRange(),
-            true);
-
+            true);*/
+    return null;
   }
 }

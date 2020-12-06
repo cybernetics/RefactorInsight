@@ -12,6 +12,7 @@ public class ChangeVariableTypeHandler extends Handler {
 
   @Override
   public RefactoringInfo specify(Refactoring refactoring, RefactoringInfo info) {
+/*
     ChangeVariableTypeRefactoring ref = (ChangeVariableTypeRefactoring) refactoring;
     final UMLOperation operationAfter = ref.getOperationAfter();
     String id = operationAfter.getClassName() + ".";
@@ -38,6 +39,7 @@ public class ChangeVariableTypeHandler extends Handler {
         .setElementAfter(ref.getChangedTypeVariable().getVariableDeclaration().toQualifiedString())
         .addMarking(ref.getOriginalVariable().getType().codeRange(),
             ref.getChangedTypeVariable().getType().codeRange(), true);
-
+*/
+    return null;
   }
 }

@@ -11,7 +11,7 @@ public class RenameAttributeHandler extends Handler {
 
   @Override
   public RefactoringInfo specify(Refactoring refactoring, RefactoringInfo info) {
-    RenameAttributeRefactoring ref = (RenameAttributeRefactoring) refactoring;
+/*    RenameAttributeRefactoring ref = (RenameAttributeRefactoring) refactoring;
 
     String classNameBefore = ref.getClassNameBefore();
     String classNameAfter = ref.getClassNameAfter();
@@ -27,7 +27,7 @@ public class RenameAttributeHandler extends Handler {
         .setNameBefore(ref.getOriginalAttribute().getVariableDeclaration().toQualifiedString())
         .setNameAfter(ref.getRenamedAttribute().getVariableDeclaration().toQualifiedString())
         .setDetailsBefore(classNameBefore)
-        .setDetailsAfter(classNameAfter);
-
+        .setDetailsAfter(classNameAfter);*/
+    return null;
   }
 }

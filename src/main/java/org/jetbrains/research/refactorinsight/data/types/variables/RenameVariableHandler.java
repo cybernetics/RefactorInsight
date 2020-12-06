@@ -11,7 +11,7 @@ public class RenameVariableHandler extends Handler {
 
   @Override
   public RefactoringInfo specify(Refactoring refactoring, RefactoringInfo info) {
-    RenameVariableRefactoring ref = (RenameVariableRefactoring) refactoring;
+/*    RenameVariableRefactoring ref = (RenameVariableRefactoring) refactoring;
     String id = ref.getOperationAfter().getClassName() + ".";
     if ((ref.getOperationAfter().isConstructor() || ref.getOperationAfter().isSetter())
         && ref.getRenamedVariable().isParameter()) {
@@ -36,6 +36,7 @@ public class RenameVariableHandler extends Handler {
         .setNameBefore(StringUtils.calculateSignature(ref.getOperationBefore()))
         .setNameAfter(StringUtils.calculateSignature(ref.getOperationAfter()))
         .addMarking(ref.getOriginalVariable().getVariableDeclaration().codeRange(),
-            ref.getRenamedVariable().codeRange(), true);
+            ref.getRenamedVariable().codeRange(), true);*/
+    return null;
   }
 }
